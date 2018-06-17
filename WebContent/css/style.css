@@ -1,0 +1,75 @@
+@CHARSET "ISO-8859-1";
+.footer {
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:4%;
+	width:100%;
+}
+.errMsg {
+	color: red;
+}
+.success {
+	color: green;
+}
+.itemClass td {
+	padding:25px;
+}
+
+.cartClass td {
+	padding:25px;
+}
+
+.cartClass {
+	background-color: #94c6d6;
+}
+
+.carttotalClass{
+	margin-left: 10px;
+	margin-right: 30px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	border-radius: 25px;
+	background-color: #94c6d6;
+}
+
+.carttotalClass td{
+	padding:15px;
+}
+
+.itemClass {
+	background:url(../img/items.jpg);
+    background-size: 100%;
+}
+
+.filterClass, .itemClass {
+	background-color: #d9e8e8;
+}
+.filterClass td {
+	padding:5px;
+}
+
+.addToCart {
+	background:url(./img/javacart.png) no-repeat;
+    cursor:pointer;
+    border:none;
+}
+
+.addToCart:active {   
+    background:url(./img/javacart.png) no-repeat;
+}
+
+span.stars, span.stars span {
+    display: block;
+    background: url(../img/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+
+a {
+	cursor: pointer;
+}

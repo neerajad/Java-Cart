@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+    	<form-bean name="loginForm" type="com.javacart.forms.LoginForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <action path="/login" input="/jsp/login.jsp" type="com.javacart.actions.LoginAction" name="loginForm" parameter="operation" scope="request">
+        	<forward name="showLogin" path="/login.jsp" />
+        	<forward name="showSubMenu" path="/jsp/showSubDept.jsp" />
+        	<forward name="showItems" path="/jsp/showItems.jsp" />
+        	<forward name="showCart" path="/jsp/showCart.jsp" />
+        </action>
+    
+        <action path="/loginCheck" input="/jsp/javaCartHome.jsp" type="com.javacart.actions.LoginAction" name="loginForm" parameter="operation" scope="request">
+        	<forward name="success" path="/jsp/javaCartHome.jsp" />
+        </action>
+        
+        <action path="/userCart" input="/jsp/showCart.jsp" type="com.javacart.actions.UserCartAction" name="loginForm" parameter="operation" scope="request">
+        	<forward name="showCart" path="/jsp/showCart.jsp" />
+        </action>
+        
+    </action-mappings>
+
+ <message-resources parameter="javaCart" />
+ 
+</struts-config>
